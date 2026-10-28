@@ -1,8 +1,8 @@
-\# SkillSpring – Course Discovery Analytics POC
+# SkillSpring – Course Discovery Analytics POC
 
 
 
-\## 📌 Project Overview
+## 📌 Project Overview
 
 
 
@@ -10,43 +10,43 @@ SkillSpring is a web analytics proof of concept (POC) built to understand how us
 
 
 
-\*\*Live Website:\*\* \[https://luthfauu.github.io/course-discovery-analytics/](https://luthfauu.github.io/course-discovery-analytics/)
+**Live Website:** [https://luthfauu.github.io/course-discovery-analytics/](https://luthfauu.github.io/course-discovery-analytics/)
 
 
 
-\## 🎯 Objectives
+## 🎯 Objectives
 
 
 
-\- Implement website event tracking using Google Tag Manager (GTM) and Google Analytics 4 (GA4).
+- Implement website event tracking using Google Tag Manager (GTM) and Google Analytics 4 (GA4).
 
-\- Analyze course views, enrollment clicks, and successful form submissions.
+- Analyze course views, enrollment clicks, and successful form submissions.
 
-\- Identify potential enrollment funnel drop-offs.
+- Identify potential enrollment funnel drop-offs.
 
-\- Compare course performance and device activity.
+- Compare course performance and device activity.
 
-\- Use SQL and Python to extract insights and suggest business improvements.
-
-
-
-\## 🛠️ Tools Used
+- Use SQL and Python to extract insights and suggest business improvements.
 
 
 
-\- \*\*Website:\*\* HTML, CSS, JavaScript, GitHub Pages
-
-\- \*\*Web Analytics:\*\* Google Tag Manager (GTM), Google Analytics 4 (GA4)
-
-\- \*\*Data Analysis:\*\* MySQL, Python, Pandas
-
-\- \*\*Visualization:\*\* Matplotlib, Seaborn
-
-\- \*\*Environment:\*\* Jupyter Notebook
+## 🛠️ Tools Used
 
 
 
-\## 📂 Project Structure
+- **Website:** HTML, CSS, JavaScript, GitHub Pages
+
+- **Web Analytics:** Google Tag Manager (GTM), Google Analytics 4 (GA4)
+
+- **Data Analysis:** MySQL, Python, Pandas
+
+- **Visualization:** Matplotlib, Seaborn
+
+- **Environment:** Jupyter Notebook
+
+
+
+## 📂 Project Structure
 
 
 
