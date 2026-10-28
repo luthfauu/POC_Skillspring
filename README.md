@@ -30,7 +30,7 @@ SkillSpring is a web analytics proof of concept (POC) built to understand how us
 
 
 
-## 🛠️ Tools Used
+ 🛠️ Tools Used
 
 
 
@@ -46,25 +46,25 @@ SkillSpring is a web analytics proof of concept (POC) built to understand how us
 
 
 
-## 📂 Project Structure
+ 📂 Project Structure
 
 
 
-\- \*\*`1-dataset/`\*\* – Original GA4 export and synthetic event-level dataset.
+- **`1-dataset`** – Original GA4 export and synthetic event-level dataset.
 
-\- \*\*`2-implementation-doc/`\*\* – Detailed implementation documentation and HTML code of the website.
+- **`2-implementation-doc/`** – Detailed implementation documentation and HTML code of the website.
 
-\- \*\*`3-python/`\*\* – Python notebook containing data analysis and visualizations.
+- **`3-python/`** – Python notebook containing data analysis and visualizations.
 
-\- \*\*`4-screenshots/`\*\* – GTM and GA4 implementation and testing screenshots. 
+- **`4-screenshots/`** – GTM and GA4 implementation and testing screenshots. 
 
-\- \*\*`5-readme/`\*\* – Project README documentation.
+- **`5-readme/`** – Project README documentation.
 
-\- \*\*`6-sql/`\*\* – SQL table schema and analysis queries.
+- **`6-sql/`** – SQL table schema and analysis queries.
 
 
 
-\## 📊 Dataset
+## 📊 Dataset
 
 
 
@@ -72,9 +72,9 @@ Two datasets were used for different purposes:
 
 
 
-\- \*\*Original GA4 data:\*\* Used to validate event tracking and explore the reports generated from actual website visits.
+- \*\*Original GA4 data:\*\* Used to validate event tracking and explore the reports generated from actual website visits.
 
-\- \*\*Synthetic dataset:\*\* Contains 100 simulated event records with `event\_id`, `user\_id`, `course\_name`, `event\_name`, and `device`. It was created to support deeper SQL and Python analysis because the actual GA4 data was limited.
+- \*\*Synthetic dataset:\*\* Contains 100 simulated event records with `event\_id`, `user\_id`, `course\_name`, `event\_name`, and `device`. It was created to support deeper SQL and Python analysis because the actual GA4 data was limited.
 
 
 
@@ -82,7 +82,7 @@ The two datasets were kept separate throughout the analysis.
 
 
 
-\## 💡 Key Insights
+## 💡 Key Insights
 
 
 
@@ -90,35 +90,34 @@ The following findings are from the synthetic dataset:
 
 
 
-\- \*\*Course engagement:\*\* Web Development recorded the highest course views (19). Data Analytics and Web Development had the highest enrollment clicks, with 12 each.
+- \*\*Course engagement:\*\* Web Development recorded the highest course views (19). Data Analytics and Web Development had the highest enrollment clicks, with 12 each.
 
-\- \*\*Course conversion:\*\* Data Analytics and Web Development achieved view-to-submission conversion rates of 23.53% each, compared with 12.50% for Cyber Security.
+- \*\*Course conversion:\*\* Data Analytics and Web Development achieved view-to-submission conversion rates of 23.53% each, compared with 12.50% for Cyber Security.
 
-\- \*\*Enrollment funnel:\*\* Of 50 unique users associated with course views, 35 clicked Enroll and 10 generated leads. The largest decrease occurred between views and enrollment clicks.
+- \*\*Enrollment funnel:\*\* Of 50 unique users associated with course views, 35 clicked Enroll and 10 generated leads. The largest decrease occurred between views and enrollment clicks.
 
-\- \*\*Device performance:\*\* Desktop recorded 17 enrollment clicks and 6 leads, while tablet recorded 6 clicks and no leads.
-
-
-
-\## 💼 Recommendations
+- \*\*Device performance:\*\* Desktop recorded 17 enrollment clicks and 6 leads, while tablet recorded 6 clicks and no leads.
 
 
+## 💼 Recommendations
 
-\- Review course fees, durations, and descriptions, and compare pricing with competing institutes.
 
-\- Investigate the lower conversion rate for Cyber Security.
 
-\- Test the enrollment experience on tablet devices.
+- Review course fees, durations, and descriptions, and compare pricing with competing institutes.
 
-\- Monitor funnel drop-offs and simplify the enrollment process where necessary.
+- Investigate the lower conversion rate for Cyber Security.
 
+- Test the enrollment experience on tablet devices.
+
+- Monitor funnel drop-offs and simplify the enrollment process where necessary.
 
 
 
 
 
 
-\## ⚠️ Limitations
+
+## ⚠️ Limitations
 
 
 
@@ -126,7 +125,7 @@ This is a demo website with a form that is not connected to a real backend. The 
 
 
 
-\## ✅ Conclusion
+## ✅ Conclusion
 
 
 
