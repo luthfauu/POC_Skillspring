@@ -6,7 +6,8 @@
 ,,,,
 Event name,view_course,enroll_click,generate_lead,Totals
 Course name,Event count,Event count,Event count,Event count
-Grand total,19,10,6,35
+Grand total,40,17,10,67
 (not set),15,8,4,27
-Web Development,2,2,1,5
-Data Analytics,2,0,1,3
+Data Analytics,11,3,3,17
+Web Development,9,4,2,15
+Cybersecurity,5,2,1,8
