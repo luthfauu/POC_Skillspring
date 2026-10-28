@@ -56,11 +56,11 @@ The following findings are from the synthetic dataset:
 - Test the enrollment experience on tablet devices.
 - Monitor funnel drop-offs and simplify the enrollment process where necessary.
 
-These findings suggest areas for further investigation; they do not establish the causes of user drop-offs.
+
 
 ## ⚠️ Limitations
 
-This is a demo website with a form that is not connected to a real backend. The actual GA4 dataset is limited and may include test visits. SQL and Python findings are based on synthetic data and should not be interpreted as actual customer behavior. The synthetic dataset also lacks timestamps and session IDs, so sequential user journeys cannot be verified.
+This is a demo website with a form that is not connected to a real backend. The actual GA4 dataset is limited and may include test visits. SQL and Python findings are based on synthetic data and should not be interpreted as actual customer behavior.
 
 ## ✅ Conclusion
 
