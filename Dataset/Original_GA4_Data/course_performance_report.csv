@@ -1,0 +1,12 @@
+# ----------------------------------------,,,,
+# Course Discovery Analytics POC,,,,
+# Funnel-Course Performance Analysis,,,,
+# 20261025-20261026,,,,
+# ----------------------------------------,,,,
+,,,,
+Event name,view_course,enroll_click,generate_lead,Totals
+Course name,Event count,Event count,Event count,Event count
+Grand total,19,10,6,35
+(not set),15,8,4,27
+Web Development,2,2,1,5
+Data Analytics,2,0,1,3

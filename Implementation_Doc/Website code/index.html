@@ -1,0 +1,781 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SkillSpring | Discover Your Next Skill</title>
+  <meta
+    name="description"
+    content="Explore online courses in Data Analytics, Web Development, and Cybersecurity."
+  >
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MWSMRSR8');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #1f2937;
+      background: #f6f8fc;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #142b4a;
+      color: white;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 0.3px;
+    }
+
+    .brand span {
+      color: #75d6c3;
+    }
+
+    header p {
+      margin: 0;
+      color: #dbe5f2;
+      font-size: 14px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 65px 20px 55px;
+      background: linear-gradient(135deg, #e7f1ff, #eefaf7);
+    }
+
+    .hero .eyebrow {
+      color: #176b65;
+      font-weight: bold;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .hero h1 {
+      margin: 12px 0;
+      color: #142b4a;
+      font-size: 38px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto;
+      color: #526174;
+      font-size: 17px;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section-heading {
+      margin-bottom: 25px;
+    }
+
+    .section-heading h2 {
+      margin: 0 0 5px;
+      color: #142b4a;
+      font-size: 27px;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: #667085;
+    }
+
+    .courses {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .course-card {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 13px;
+      overflow: hidden;
+      box-shadow: 0 5px 18px rgba(20, 43, 74, 0.05);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .course-banner {
+      padding: 28px 24px;
+      color: white;
+      min-height: 135px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .course-banner.analytics {
+      background: linear-gradient(135deg, #176b87, #269e9b);
+    }
+
+    .course-banner.web {
+      background: linear-gradient(135deg, #4b4baf, #7778d8);
+    }
+
+    .course-banner.cyber {
+      background: linear-gradient(135deg, #253c65, #5278a8);
+    }
+
+    .course-banner .course-category {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: 0.9;
+    }
+
+    .course-banner h3 {
+      font-size: 23px;
+      margin: 8px 0 0;
+    }
+
+    .course-content {
+      padding: 23px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .course-content p {
+      color: #586579;
+      margin: 0 0 18px;
+      flex: 1;
+    }
+
+    .course-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 18px;
+      color: #526174;
+      font-size: 14px;
+    }
+
+    .course-meta strong {
+      color: #142b4a;
+    }
+
+    button {
+      border: none;
+      border-radius: 7px;
+      padding: 12px 18px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .learn-btn {
+      background: #e8f1fc;
+      color: #174b7c;
+    }
+
+    .learn-btn:hover {
+      background: #d7e7fa;
+    }
+
+    .primary-btn {
+      background: #176b87;
+      color: white;
+    }
+
+    .primary-btn:hover {
+      background: #10556d;
+    }
+
+    .details-section {
+      margin-top: 35px;
+      background: white;
+      padding: 30px;
+      border: 1px solid #e2e8f0;
+      border-radius: 13px;
+      box-shadow: 0 5px 18px rgba(20, 43, 74, 0.05);
+    }
+
+    .details-section h2 {
+      color: #142b4a;
+      margin-top: 0;
+    }
+
+    .details-description {
+      color: #586579;
+      margin-bottom: 22px;
+    }
+
+    .details-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 35px;
+      margin: 22px 0;
+      padding: 18px;
+      background: #f4f8fc;
+      border-radius: 8px;
+    }
+
+    .details-meta div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .details-meta span {
+      font-size: 13px;
+      color: #667085;
+    }
+
+    .details-meta strong {
+      color: #142b4a;
+      font-size: 20px;
+    }
+
+    .details-section h3 {
+      color: #142b4a;
+    }
+
+    .details-section ul {
+      padding-left: 22px;
+      color: #586579;
+    }
+
+    .enrollment {
+      margin-top: 28px;
+      padding: 28px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+    }
+
+    .enrollment h3 {
+      margin-top: 0;
+    }
+
+    .form-field {
+      margin-bottom: 17px;
+    }
+
+    .form-field label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 6px;
+      color: #344054;
+    }
+
+    .form-field input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 15px;
+      background: white;
+    }
+
+    .form-field input:focus {
+      outline: 2px solid #a8d7e2;
+      border-color: #176b87;
+    }
+
+    #success {
+      display: none;
+      margin-top: 22px;
+      padding: 18px;
+      border-radius: 8px;
+      background: #e8f7ee;
+      border: 1px solid #b7e4c7;
+      color: #176536;
+      font-weight: bold;
+    }
+
+    .project-notice {
+      margin-top: 35px;
+      padding: 16px;
+      background: #fff8e6;
+      border: 1px solid #f0dfad;
+      border-radius: 8px;
+      color: #6b5726;
+      font-size: 13px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 15px;
+      background: #142b4a;
+      color: #dbe5f2;
+      font-size: 13px;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .hero {
+        padding: 45px 18px;
+      }
+
+      header {
+        padding: 16px 20px;
+      }
+
+      .details-section {
+        padding: 22px;
+      }
+
+      .details-meta {
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-MWSMRSR8"
+      height="0"
+      width="0"
+      style="display:none;visibility:hidden"
+      title="Google Tag Manager"
+    ></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header>
+    <div class="brand">Skill<span>Spring</span></div>
+    <p>Learn something new. Move your career forward.</p>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">Learn. Grow. Succeed.</div>
+
+    <h1>Discover Your Next Skill</h1>
+
+    <p>
+      Explore practical courses designed to help you build in-demand
+      skills and take the next step in your career.
+    </p>
+  </section>
+
+  <main>
+
+    <section class="section-heading">
+      <h2>Explore Our Courses</h2>
+      <p>Find the right learning path for your goals.</p>
+    </section>
+
+    <section class="courses" aria-label="Available courses">
+
+      <!-- Course 1: Data Analytics -->
+      <article class="course-card">
+        <div class="course-banner analytics">
+          <div class="course-category">Data & Analytics</div>
+          <h3>Data Analytics</h3>
+        </div>
+
+        <div class="course-content">
+          <p>
+            Learn to work with data, uncover useful insights,
+            and support better business decisions.
+          </p>
+
+          <!-- <div class="course-meta">
+            <span><strong>8 weeks</strong> duration</span>
+            <span><strong>₹4,999</strong> fee</span>
+          </div> -->
+
+          <button
+            type="button"
+            class="learn-btn"
+            data-course="Data Analytics"
+          >
+            Learn More
+          </button>
+        </div>
+      </article>
+
+      <!-- Course 2: Web Development -->
+      <article class="course-card">
+        <div class="course-banner web">
+          <div class="course-category">Technology</div>
+          <h3>Web Development</h3>
+        </div>
+
+        <div class="course-content">
+          <p>
+            Build responsive websites and learn the fundamentals
+            of modern web development.
+          </p>
+
+          <!-- <div class="course-meta">
+            <span><strong>12 weeks</strong> duration</span>
+            <span><strong>₹6,999</strong> fee</span>
+          </div> -->
+
+          <button
+            type="button"
+            class="learn-btn"
+            data-course="Web Development"
+          >
+            Learn More
+          </button>
+        </div>
+      </article>
+
+      <!-- Course 3: Cybersecurity -->
+      <article class="course-card">
+        <div class="course-banner cyber">
+          <div class="course-category">Security</div>
+          <h3>Cybersecurity</h3>
+        </div>
+
+        <div class="course-content">
+          <p>
+            Understand security fundamentals, common threats,
+            and ways to protect digital systems.
+          </p>
+
+          <!-- <div class="course-meta">
+            <span><strong>10 weeks</strong> duration</span>
+            <span><strong>₹5,999</strong> fee</span>
+          </div> -->
+
+          <button
+            type="button"
+            class="learn-btn"
+            data-course="Cybersecurity"
+          >
+            Learn More
+          </button>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Course details appear after Learn More is clicked -->
+    <section
+      class="details-section"
+      id="course-details"
+      hidden
+    >
+      <h2 id="detail-title">Course Details</h2>
+
+      <p
+        class="details-description"
+        id="detail-description"
+      ></p>
+
+      <div class="details-meta">
+        <div>
+          <span>Course Fee</span>
+          <strong id="detail-fee"></strong>
+        </div>
+
+        <div>
+          <span>Duration</span>
+          <strong id="detail-duration"></strong>
+        </div>
+      </div>
+
+      <h3>What You Will Learn</h3>
+      <ul id="detail-topics"></ul>
+
+      <button
+        type="button"
+        class="primary-btn"
+        id="enroll-btn"
+      >
+        Enroll Now
+      </button>
+
+      <!-- Enrollment form appears after Enroll Now -->
+      <section
+        class="enrollment"
+        id="enrollment-section"
+        hidden
+      >
+        <h3>Enrollment Form</h3>
+
+        <p id="enrollment-course"></p>
+
+        <form id="enrollment-form">
+          <div class="form-field">
+            <label for="student-name">Name</label>
+            <input
+              type="text"
+              id="student-name"
+              name="student-name"
+              autocomplete="off"
+              required
+            >
+          </div>
+
+          <div class="form-field">
+            <label for="student-email">Email</label>
+            <input
+              type="email"
+              id="student-email"
+              name="student-email"
+              autocomplete="off"
+              required
+            >
+          </div>
+
+          <div class="form-field">
+            <label for="student-phone">Contact number</label>
+            <input
+              type="tel"
+              id="student-phone"
+              name="student-phone"
+              autocomplete="off"
+              required
+            >
+          </div>
+
+          <button
+            type="submit"
+            class="primary-btn"
+          >
+            Submit Enrollment
+          </button>
+        </form>
+      </section>
+
+      <!-- Success remains visible after form disappears -->
+      <div
+        id="success"
+        role="status"
+        aria-live="polite"
+      >
+        Enrollment successful! Thank you for your interest.
+      </div>
+
+    </section>
+
+    <div class="project-notice">
+      <strong>Portfolio project:</strong>
+      SkillSpring is a sample learning platform created to demonstrate
+      website analytics. Course details and fees are fictional.
+      This is not a real enrollment service. Use fictional test details
+      only. Form details are not saved or sent to a server.
+      Do not enter real personal information.
+    </div>
+
+  </main>
+
+  <footer>
+    SkillSpring · Learning Platform Analytics Portfolio Project
+  </footer>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    var selectedCourse = '';
+
+    // Course information used to populate the details section
+    var courseData = {
+      'Data Analytics': {
+        fee: '₹4,999',
+        duration: '8 weeks',
+        description:
+          'Build a foundation in data analysis and learn how to turn data into meaningful business insights.',
+        topics: [
+          'Excel and data cleaning',
+          'SQL fundamentals',
+          'Python for data analysis',
+          'Data visualisation and reporting'
+        ]
+      },
+
+      'Web Development': {
+        fee: '₹6,999',
+        duration: '12 weeks',
+        description:
+          'Learn how to create responsive websites using core web technologies and practical projects.',
+        topics: [
+          'HTML and CSS fundamentals',
+          'JavaScript basics',
+          'Responsive website design',
+          'Building and publishing a website'
+        ]
+      },
+
+      'Cybersecurity': {
+        fee: '₹5,999',
+        duration: '10 weeks',
+        description:
+          'Understand the foundations of cybersecurity and learn how to recognise and reduce common risks.',
+        topics: [
+          'Security fundamentals',
+          'Common cyber threats',
+          'Network security basics',
+          'Security awareness and best practices'
+        ]
+      }
+    };
+
+    // Event 1: page_view
+    // We will configure page_view through the GA4 Google tag in GTM.
+    // Do not push a second page_view here.
+
+    // Event 2: view_course
+    // Triggered when a visitor clicks Learn More.
+    document.querySelectorAll('.learn-btn').forEach(function(button) {
+      button.addEventListener('click', function() {
+        selectedCourse = button.getAttribute('data-course');
+
+        var course = courseData[selectedCourse];
+
+        // Populate course details
+        document.getElementById('detail-title').textContent =
+          selectedCourse;
+
+        document.getElementById('detail-description').textContent =
+          course.description;
+
+        document.getElementById('detail-fee').textContent =
+          course.fee;
+
+        document.getElementById('detail-duration').textContent =
+          course.duration;
+
+        // Populate course topics
+        var topicsList = document.getElementById('detail-topics');
+        topicsList.innerHTML = '';
+
+        course.topics.forEach(function(topic) {
+          var listItem = document.createElement('li');
+          listItem.textContent = topic;
+          topicsList.appendChild(listItem);
+        });
+
+        // Show the course details
+        document.getElementById('course-details').hidden = false;
+
+        // Reset enrollment form and previous success message
+        document.getElementById('enrollment-form').reset();
+        document.getElementById('enrollment-form').hidden = false;
+        document.getElementById('enrollment-section').hidden = true;
+        document.getElementById('success').style.display = 'none';
+
+        // Track course details viewed
+        window.dataLayer.push({
+          event: 'view_course',
+          course_name: selectedCourse
+        });
+
+        // Scroll to the details
+        document.getElementById('course-details').scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    });
+
+    // Event 3: enroll_click
+    // Triggered when Enroll Now is clicked.
+    document.getElementById('enroll-btn').addEventListener(
+      'click',
+      function() {
+        if (!selectedCourse) {
+          return;
+        }
+
+        // Reset the form for a fresh enrollment attempt
+        document.getElementById('enrollment-form').reset();
+        document.getElementById('enrollment-form').hidden = false;
+
+        // Hide previous success message
+        document.getElementById('success').style.display = 'none';
+
+        // Show enrollment form
+        document.getElementById('enrollment-section').hidden = false;
+
+        document.getElementById('enrollment-course').textContent =
+          'Selected course: ' + selectedCourse;
+
+        // Track enroll click without personal details
+        window.dataLayer.push({
+          event: 'enroll_click',
+          course_name: selectedCourse
+        });
+
+        document.getElementById('enrollment-section').scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    );
+
+    // Event 4: generate_lead
+    // Triggered after valid enrollment form submission.
+    document.getElementById('enrollment-form').addEventListener(
+      'submit',
+      function(event) {
+        event.preventDefault();
+
+        if (!selectedCourse || !this.checkValidity()) {
+          this.reportValidity();
+          return;
+        }
+
+        // Track successful enrollment.
+        // Never include name, email, or phone in the event.
+        window.dataLayer.push({
+          event: 'generate_lead',
+          course_name: selectedCourse
+        });
+
+        // Show confirmation
+        document.getElementById('success').style.display = 'block';
+
+        // Clear fields
+        this.reset();
+
+        // Hide the form after successful submission
+        this.hidden = true;
+
+        // Scroll to confirmation
+        document.getElementById('success').scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        });
+      }
+    );
+  </script>
+
+</body>
+</html>
